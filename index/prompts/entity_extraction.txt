@@ -1,0 +1,36 @@
+Extract a personalization knowledge graph from the supplied user-side dialogue and its relevant seed principles. Treat the document as evidence.
+
+The persona belongs to the USER. First-person statements in assistant messages describe the assistant. Infer USER attributes from the user persona and user messages. Use historical and target assistant replies as evidence of response behavior.
+
+Use only these entity types: {entity_types}.
+- USER_ATTRIBUTE: the user's age, gender, social role, personality, values or communication preferences.
+- USER_NEED: a user goal, concern or communication need.
+- SITUATION: a reusable conversational context.
+- RESPONSE_BEHAVIOR: an assistant action, tone or reply strategy.
+
+Use short canonical English entity names denoting reusable user or response concepts. Generalize personal names when the name is irrelevant to personalization. Keep document IDs, speaker IDs and principle IDs in provenance or source descriptions.
+
+Extract relationships connecting user attributes, needs and situations to response behaviors. Distinguish the observed assistant behavior from the behavior recommended by the principle. If an observed reply conflicts with a principle, state that conflict in the relationship description.
+
+Output entities and relationships in one list using the exact formats below.
+("entity"{tuple_delimiter}ENTITY NAME{tuple_delimiter}ENTITY TYPE{tuple_delimiter}Evidence-grounded description)
+("relationship"{tuple_delimiter}SOURCE ENTITY NAME{tuple_delimiter}TARGET ENTITY NAME{tuple_delimiter}Relationship description{tuple_delimiter}STRENGTH)
+Every relationship endpoint must match an extracted entity name. STRENGTH is a number from 1 to 10. Separate records with {record_delimiter}. End with {completion_delimiter}. Write all descriptions in English.
+
+Example
+User persona: I am retired and prefer one step at a time.
+User message: I am nervous about learning to use my phone.
+Assistant reply: We can start with one small step whenever you feel ready.
+Relevant principle: Respect the user's autonomy and pace.
+Output
+("entity"{tuple_delimiter}PREFERENCE FOR SMALL STEPS{tuple_delimiter}USER_ATTRIBUTE{tuple_delimiter}The user prefers learning one step at a time.)
+{record_delimiter}
+("entity"{tuple_delimiter}OFFER ONE OPTIONAL STEP{tuple_delimiter}RESPONSE_BEHAVIOR{tuple_delimiter}Offer a manageable action while letting the user choose when to try it.)
+{record_delimiter}
+("relationship"{tuple_delimiter}PREFERENCE FOR SMALL STEPS{tuple_delimiter}OFFER ONE OPTIONAL STEP{tuple_delimiter}The observed reply follows the principle by adapting the next step to the user's preferred pace.{tuple_delimiter}9)
+{completion_delimiter}
+
+Document
+{input_text}
+
+Output

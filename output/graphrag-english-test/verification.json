@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "sample_id": "elderlytech_vqa_139",
+  "checks": {
+    "all_trace_text_has_no_cjk": true,
+    "query_settings_unchanged": true,
+    "all_five_new_skills_ranked": true,
+    "selected_skill_inserted": true,
+    "flat_index_provenance": true,
+    "reference_not_in_generation_input": true,
+    "answer_file_matches": true,
+    "answer_completed": true,
+    "ttrt_measured": true
+  },
+  "inferred_profile": {
+    "explicit": {
+      "age_group": "older adult",
+      "gender_presentation": "female",
+      "role": "retired person"
+    },
+    "implicit": {
+      "personality": [
+        "emotional sensitivity"
+      ],
+      "values": [
+        "tradition",
+        "security"
+      ],
+      "communication_preferences": null
+    }
+  },
+  "retrieval_query": "Age group: older adult. Gender presentation: female. Role: retired person. Personality: emotional sensitivity. Values: tradition, security",
+  "timing": {
+    "vl_seconds": 8.993646300048567,
+    "query_embedding_ms": 392.2609,
+    "dot_product_and_ranking_ms": 40.8553,
+    "generation_seconds": 9.094083899981342,
+    "ttrt_seconds": 0.8621445999597199
+  }
+}

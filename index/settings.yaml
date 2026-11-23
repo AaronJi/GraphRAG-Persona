@@ -1,0 +1,72 @@
+encoding_model: cl100k_base
+llm:
+  api_key: local
+  type: openai_chat
+  api_base: <GENERATION_API_BASE>
+  model: D:/Models/Qwen3.5-4B
+  model_supports_json: false
+  temperature: 0.0
+  max_tokens: 1200
+  request_timeout: 600.0
+  max_retries: 2
+  concurrent_requests: 1
+async_mode: asyncio
+parallelization:
+  stagger: 0.1
+  num_threads: 1
+embeddings:
+  target: none
+  llm:
+    api_key: local
+    type: openai_embedding
+    api_base: <EMBEDDING_API_BASE>
+    model: bge-m3
+skip_workflows:
+- generate_text_embeddings
+input:
+  type: file
+  file_type: text
+  base_dir: input
+  file_encoding: utf-8
+  file_pattern: .*\.txt$
+chunks:
+  size: 8192
+  overlap: 0
+  group_by_columns:
+  - id
+cache:
+  type: file
+  base_dir: cache
+reporting:
+  type: file
+  base_dir: logs
+storage:
+  type: file
+  base_dir: output
+entity_extraction:
+  prompt: prompts/entity_extraction.txt
+  entity_types:
+  - USER_ATTRIBUTE
+  - USER_NEED
+  - SITUATION
+  - RESPONSE_BEHAVIOR
+  max_gleanings: 0
+summarize_descriptions:
+  max_length: 300
+claim_extraction:
+  enabled: false
+community_reports:
+  prompt: prompts/community_report.txt
+  max_length: 1200
+  max_input_length: 8192
+cluster_graph:
+  max_cluster_size: 1000
+  strategy:
+    type: leiden
+    max_cluster_size: 1000
+    seed: 42
+    use_lcc: false
+embed_graph:
+  enabled: false
+umap:
+  enabled: false

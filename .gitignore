@@ -221,3 +221,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# GraphRAG-Persona local artifacts omitted from this curated copy
+/index/cache/
+/.output/
+/plot_codes/
+/scripts/sample_persona_train.py
+/skill/persona-*/
+/data/synthetic_persona_chat/
+/data/synthetic_persona_chat_user_side/train.jsonl
+/data/synthetic_persona_chat_user_side/validation.jsonl
+/data/skill_when_embeddings.npz
+/output/*
+!/output/graphrag-english-test/

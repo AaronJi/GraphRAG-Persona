@@ -1,0 +1,24 @@
+Summarize this knowledge-graph community as reusable knowledge for personalized assistant replies.
+
+The entities and relationships concern USER attributes, USER needs, conversational situations and ASSISTANT response behaviors. User profiles have two categories. Explicit attributes describe age, gender and social role. Implicit attributes describe personality, personal values and communication preferences. Keep assistant self-descriptions attached to the assistant.
+
+Explain which user characteristics and situations support each response strategy. Distinguish observed behavior from principle-recommended behavior, including conflicts. Ground the report in the supplied records and summaries.
+
+Return one JSON object with exactly these fields.
+{
+  "title": "Short, specific English community title",
+  "summary": "Two or three sentences connecting applicable user characteristics, situations and response guidance.",
+  "rating": 5.0,
+  "rating_explanation": "One sentence explaining the community's importance for personalization.",
+  "findings": [
+    {
+      "summary": "A reusable personalization pattern",
+      "explanation": "Explain its conditions and response behavior with references to the supplied records [Data: Entities (1); Relationships (2)]."
+    }
+  ]
+}
+
+The rating must be a floating-point number from 0.0 to 10.0. Include one to four concise findings as supported by the community. Cite actual supplied record IDs using [Data: Entities (id); Relationships (id)] or Reports when using supplied child reports. Use at most five IDs per reference and append +more for additional supporting records. Write every title, summary, explanation, and finding entirely in English, including any profile category names and labels.
+
+Community evidence
+{input_text}

@@ -1,0 +1,16 @@
+Compile the supplied GraphRAG community report into one reusable When–How skill for an assistant responding to a user.
+
+The profile describes the USER. Its explicit category covers age, gender and social role. Its implicit category covers personality, values and communication preferences. The When condition may use inferred profile attributes and a relevant conversational situation supported by the report. Use the profile definition as the vocabulary for applicability.
+
+The Act field expresses the skill's How guidance. Give two or three concise, concrete instructions for the assistant's tone, content or response sequence. Preserve the report's distinction between observed behavior and principle-recommended behavior.
+
+Generalize the skill to new user questions. Source IDs, speaker labels and example replies identify evidence. Keep the guidance focused on adapting the assistant's reply to the user.
+
+Return only one English JSON object. Write the title, When condition, and Act guidance entirely in English, including all profile category names and labels. Do not quote non-English labels.
+{"title":"Short skill title","when":"Applicable USER profile conditions and any essential conversational situation.","act":"Concrete guidance for the ASSISTANT response."}
+
+User profile definition
+{profile_definition}
+
+Official GraphRAG community report
+{community_report}

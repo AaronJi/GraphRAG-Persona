@@ -1,0 +1,14 @@
+Estimate the user profile required by this project from a single user photo. The profile is used for downstream retrieval and evaluation. Observe the main person and provide your most reasonable inferences, including uncertain estimates. Use null only when you cannot form a judgment. Do not invent user statements or conversations that are not recorded in the image.
+
+Explicit profile
+- age_group: choose one of "preschool child" (ages 0–6), "school-age child" (ages 7–12), "adolescent" (ages 13–19), "young adult" (ages 20–39), "middle-aged adult" (ages 40–59), or "older adult" (ages 60 and above).
+- gender_presentation: describe the person's visual presentation using "male" or "female".
+- role: choose the most likely identity from "student", "teacher / educator", "employee / office worker", "manager / executive", "healthcare worker", "engineer / developer", "freelancer / entrepreneur", "artist / designer / creative professional", "athlete / coach / sports professional", "researcher / scholar", "finance / legal / consulting professional", "service industry worker", "military / police / law enforcement", "retired person", or "unemployed / job seeker".
+
+Implicit profile
+- personality: describe inferred tendencies using dimensions such as openness, conscientiousness, extraversion, agreeableness, and emotional sensitivity.
+- values: describe inferred orientations such as universalism, benevolence, power, achievement, self-direction, stimulation, hedonism, tradition, conformity, and security.
+- communication_preferences: describe inferred communication preferences, such as "prefers concise, direct explanations" or "prefers clear, step-by-step explanations".
+
+Return only a JSON object, retaining every key. Explicit fields must contain an exact English label or null. Implicit fields must contain a short English string, an array of English strings, or null.
+{"explicit":{"age_group":null,"gender_presentation":null,"role":null},"implicit":{"personality":null,"values":null,"communication_preferences":null}}

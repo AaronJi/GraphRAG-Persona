@@ -1,0 +1,56 @@
+{
+  "graphrag": "0.5.0",
+  "status": "complete",
+  "persona_side": "user",
+  "source": "data/synthetic_persona_chat_user_side/train_sample_1pct.jsonl",
+  "principles": "principles.json",
+  "language": "English",
+  "samples": 3,
+  "documents": 2,
+  "official_workflows": [
+    "create_final_documents",
+    "create_base_text_units",
+    "create_final_text_units",
+    "create_base_entity_graph",
+    "create_final_entities",
+    "create_final_relationships",
+    "create_final_nodes",
+    "create_final_communities",
+    "create_final_community_reports"
+  ],
+  "artifacts": "index/output",
+  "community_level": 0,
+  "skills": 5,
+  "skill_directory": "skill/graphrag",
+  "when_embeddings": "data/graphrag_skill_when_embeddings.npz",
+  "parquet_tables": {
+    "create_final_communities.parquet": {
+      "path": "index/output/create_final_communities.parquet",
+      "rows": 5
+    },
+    "create_final_community_reports.parquet": {
+      "path": "index/output/create_final_community_reports.parquet",
+      "rows": 6
+    },
+    "create_final_documents.parquet": {
+      "path": "index/output/create_final_documents.parquet",
+      "rows": 2
+    },
+    "create_final_entities.parquet": {
+      "path": "index/output/create_final_entities.parquet",
+      "rows": 22
+    },
+    "create_final_nodes.parquet": {
+      "path": "index/output/create_final_nodes.parquet",
+      "rows": 22
+    },
+    "create_final_relationships.parquet": {
+      "path": "index/output/create_final_relationships.parquet",
+      "rows": 21
+    },
+    "create_final_text_units.parquet": {
+      "path": "index/output/create_final_text_units.parquet",
+      "rows": 2
+    }
+  }
+}

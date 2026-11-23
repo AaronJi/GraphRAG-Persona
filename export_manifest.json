@@ -1,0 +1,353 @@
+{
+  "description": "Curated current code and small historical examples; no real API rerun was performed for this export.",
+  "samples": {
+    "training_subset": 1199,
+    "indexed_inputs": 3,
+    "indexed_documents": 2,
+    "synthetic_test": 1,
+    "elderlytech_test": 1,
+    "profile_records": 1,
+    "reply_records": 1
+  },
+  "historical_embedding_cache_requires_api_rebuild": true,
+  "project_metadata_paths": "repository-relative",
+  "excluded": [
+    "index/cache",
+    "scripts/sample_persona_train.py",
+    "plot_codes",
+    "skill/persona-*",
+    "full datasets",
+    "full-run/baseline results",
+    "legacy spreadsheets",
+    "scratch files"
+  ],
+  "files_excluding_this_manifest": [
+    {
+      "path": ".gitignore",
+      "bytes": 5302,
+      "sha256": "466c24b2ced2df68389380e4f21374cfeb8fc6a1344edf188e347809e4032b72"
+    },
+    {
+      "path": "README.md",
+      "bytes": 20105,
+      "sha256": "f29eb6b196bb51fa5e335fdb037148590aec372a5c0b41c8da22233077058031"
+    },
+    {
+      "path": "data/elderlytech_vqa/images/elderlytech_vqa_139.jpg",
+      "bytes": 28645,
+      "sha256": "44abc265502d8b25ea7377e86ba4ddb363f384b723d3a578e7b9a7a4c104664a"
+    },
+    {
+      "path": "data/elderlytech_vqa/manifest.jsonl",
+      "bytes": 104,
+      "sha256": "c122a2a4b39a9cdb42a963779df2801363b190f29df36736c0fb4b9e5ba954d0"
+    },
+    {
+      "path": "data/elderlytech_vqa/references.jsonl",
+      "bytes": 2234,
+      "sha256": "e65a00cfb8adde8690f9d25506adc5edea5a74cc74aa6983543a06c8e478d7ab"
+    },
+    {
+      "path": "data/graphrag_skill_when_embeddings.npz",
+      "bytes": 21260,
+      "sha256": "89a1ee4e9498445ca37ebf4df731e6a9a1a56b292b8e65f9f2454d3c3d2ddf4e"
+    },
+    {
+      "path": "data/synthetic_persona_chat_user_side/test.jsonl",
+      "bytes": 1124,
+      "sha256": "58555e6a152177460e4f221157501b610862ef1a15ca1c3a77cf733792c3c1c3"
+    },
+    {
+      "path": "data/synthetic_persona_chat_user_side/train_sample_1pct.jsonl",
+      "bytes": 3911435,
+      "sha256": "80e925a09a6df08dd347977dbda7f3526f8ef4125ac3e2911e9be6b6ff3ceaab"
+    },
+    {
+      "path": "data/synthetic_persona_chat_user_side/train_sample_1pct.manifest.json",
+      "bytes": 28155,
+      "sha256": "4a2594c09c742dddd66e4aaba854b909b23c993e67fe995b417bc7ef6d088f7e"
+    },
+    {
+      "path": "index.py",
+      "bytes": 11365,
+      "sha256": "4ff5863b408e99cf635ffed101aefb26d6c42f2b2881b28b183e17f7fa817b1e"
+    },
+    {
+      "path": "index/output/associations.jsonl",
+      "bytes": 191,
+      "sha256": "85e2291eb00c969e8791649b01cca654408360a3e0f9940e3eaa27eeb2d68b38"
+    },
+    {
+      "path": "index/output/create_final_communities.parquet",
+      "bytes": 9932,
+      "sha256": "3ee28a562272375c43f8e04f4678de4f2314027dd09f3471e1db26783613ea3e"
+    },
+    {
+      "path": "index/output/create_final_community_reports.parquet",
+      "bytes": 59453,
+      "sha256": "ea5dab273c7ca24807e99547bf7037ab79dc106aa1efacbc0e0ba92000e77008"
+    },
+    {
+      "path": "index/output/create_final_documents.parquet",
+      "bytes": 18096,
+      "sha256": "de8c640cbd9343e789f1819a59e535b57c9bf0db052ff36d3c4fb680002bda26"
+    },
+    {
+      "path": "index/output/create_final_entities.parquet",
+      "bytes": 8804,
+      "sha256": "aa0c39687fea013fffde0b31b21f54609dae125b0608e9427cb4d45a93aaec89"
+    },
+    {
+      "path": "index/output/create_final_nodes.parquet",
+      "bytes": 7436,
+      "sha256": "d435d2711e89ad18517f0d9307ab8bc54dfefca232dc343aca7d76348696023d"
+    },
+    {
+      "path": "index/output/create_final_relationships.parquet",
+      "bytes": 9867,
+      "sha256": "ae918fd72d178352e455b595b1ba9e8a8c4e4fc1d13a0f01214f80145f498f1f"
+    },
+    {
+      "path": "index/output/create_final_text_units.parquet",
+      "bytes": 21472,
+      "sha256": "2ae8fa3244aa29d27a8fac4a0c5ce51ad526e60dba6416c35df8b5bcc564c475"
+    },
+    {
+      "path": "index/output/skills.jsonl",
+      "bytes": 3099,
+      "sha256": "13f2b2205ba5572e39642fefdbd13c5d0a2069279ad425a3c1e051092750c15d"
+    },
+    {
+      "path": "index/output/stats.json",
+      "bytes": 1317,
+      "sha256": "566f2638ff41c824a3698cc69401e5ba47b7df4b617b020ab2b176c688b8846b"
+    },
+    {
+      "path": "index/output/summary.json",
+      "bytes": 1705,
+      "sha256": "d0779e459da534d884589cdac2b188b3bc092058665757b5456008ae6ba3a0ee"
+    },
+    {
+      "path": "index/output/verification.json",
+      "bytes": 8083,
+      "sha256": "14a24bb4491801de1f0b9f1b55ecbe0dd48db4c32edc09b0c9d439d76d08c944"
+    },
+    {
+      "path": "index/prompts/community_report.txt",
+      "bytes": 1775,
+      "sha256": "60672a0fb2f06af9b9c958688aba7a4d5f99f2d381787e1a00345b37e1e68c86"
+    },
+    {
+      "path": "index/prompts/entity_extraction.txt",
+      "bytes": 2712,
+      "sha256": "e6091d5e178453a4d67dc3fd5deeea0634b09a8a8b8004196f105697b15567d0"
+    },
+    {
+      "path": "index/settings.yaml",
+      "bytes": 1393,
+      "sha256": "08b2675f7559b9351f77c659b638a8f079321e028cb9713e9092eb55d5e69d15"
+    },
+    {
+      "path": "input/elderlytech_vqa_profiles.jsonl",
+      "bytes": 410,
+      "sha256": "e36f3086bfe96b408ba83a0685f1cdf99481f6cbb75737cb0a305d01d2bcf175"
+    },
+    {
+      "path": "main.py",
+      "bytes": 928,
+      "sha256": "f32685c9b4d186787b2a9d22017f2c01d98f4b330aa0e48ea4f8c34e0d70b105"
+    },
+    {
+      "path": "output/graphrag-english-test/elderlytech_vqa_139_answer.txt",
+      "bytes": 931,
+      "sha256": "1c6f22c71d1766cef4834ed743eef9cfdbb07715a871c449fba17504f1a81628"
+    },
+    {
+      "path": "output/graphrag-english-test/elderlytech_vqa_139_pipeline.json",
+      "bytes": 13725,
+      "sha256": "0b27dd947f22fc8cc1b2896b687fb0e886bdc1a0da796c57e8c7e7c92e62bdf6"
+    },
+    {
+      "path": "output/graphrag-english-test/verification.json",
+      "bytes": 1182,
+      "sha256": "b8acf0690cd0b35f81b67a7d2eec3c7212371402c92c732b00f8d06272003547"
+    },
+    {
+      "path": "principles.json",
+      "bytes": 25500,
+      "sha256": "929ece3147176450075ac63fb7156d7b2c513ef3c259977cc5716ca519be279f"
+    },
+    {
+      "path": "prompt/community_skill.txt",
+      "bytes": 1376,
+      "sha256": "5d160743371ebf897da3bb16d81be9b67dcf1050ff090d42d44b0869cb57f4b3"
+    },
+    {
+      "path": "prompt/final_generation.txt",
+      "bytes": 1938,
+      "sha256": "8e7a1cce79587d35c9da2d011a6bd984531662051a566985c5e6b7a3840cedcb"
+    },
+    {
+      "path": "prompt/principle_association.txt",
+      "bytes": 1460,
+      "sha256": "3568d811b244dbd161b128bd378e92a4bddb8bc01f21934f31867cac045150a1"
+    },
+    {
+      "path": "prompt/qwen35_direct_baseline.txt",
+      "bytes": 1060,
+      "sha256": "112a49a77272491b7554bc872deaadaf90d6f49161bbf18d2d3e58489c6b84da"
+    },
+    {
+      "path": "prompt/text_user_profile.txt",
+      "bytes": 2142,
+      "sha256": "5f3cebe0285638d12432798842ac3a31ed0773348ff526098c91f66893814b91"
+    },
+    {
+      "path": "prompt/user_profile.txt",
+      "bytes": 2039,
+      "sha256": "539877f072851b77ba26d3789a7409a51add70981fb5a29dd9ee5bbf232d32ea"
+    },
+    {
+      "path": "query_settings.yaml",
+      "bytes": 239,
+      "sha256": "57d53beb94f9e303c90d1972c5b012ae72083f98ab7dfa2c155e694d9a0f926c"
+    },
+    {
+      "path": "requirement.txt",
+      "bytes": 76,
+      "sha256": "958a3aa630a3251b3c56bce0f6df96247d0bd380ebf90f8cbfcdc44a9e794e44"
+    },
+    {
+      "path": "requirements-vision.txt",
+      "bytes": 400,
+      "sha256": "6467a9db0945ee3c11334b9a87d8f34a30f7aef426811715201b94559555205e"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 281,
+      "sha256": "50ef7f11d15e5ba4c3ac7dc008b159f5ce9f7144883ea8ff1337de99c1510483"
+    },
+    {
+      "path": "scripts/evaluate_persona_pipeline.py",
+      "bytes": 6410,
+      "sha256": "1f700f70346f1dca2b19edfc3959c6372fa34c78cc0b6df59cbbaac1da8e36e6"
+    },
+    {
+      "path": "scripts/evaluate_user_vlm.py",
+      "bytes": 6461,
+      "sha256": "d8d521207703b050c12ff7fd29f6e5e5fe14c22809a26e5e61543cc97fae3254"
+    },
+    {
+      "path": "scripts/generate_answer.py",
+      "bytes": 7736,
+      "sha256": "4c16c9893a19f568acd8f04450fdf1f7b97eaa634bbb8bb9558c54147b4ed595"
+    },
+    {
+      "path": "scripts/infer_user_profile.py",
+      "bytes": 8717,
+      "sha256": "438db1eb3a6f544872a50e743c9d25d0f6c63662e77f9bd24c640447325fe570"
+    },
+    {
+      "path": "scripts/pipeline.py",
+      "bytes": 11893,
+      "sha256": "9eb0eaf000e037914cfc0967297bebd6b3fef956a6bc5789aa7bef1fc65a46a8"
+    },
+    {
+      "path": "scripts/prepare_elderlytech_vqa.py",
+      "bytes": 4005,
+      "sha256": "360fe6b653092cbde62c38957bed9cbffd971606d7d2caec0e815edbe430c7f1"
+    },
+    {
+      "path": "scripts/prepare_synthetic_persona_chat.py",
+      "bytes": 11460,
+      "sha256": "31fffb2815d075d9c8d6fb776994780d696cf80d88ada7e4fd0ef4569805cbc5"
+    },
+    {
+      "path": "scripts/principles.py",
+      "bytes": 870,
+      "sha256": "a35889edce2ba286b396f8902b20f4e34f1e67c144eda8177ad92c0abfd9cf87"
+    },
+    {
+      "path": "scripts/query_settings.py",
+      "bytes": 1629,
+      "sha256": "ee7e41892085ef9cd7bd4945eb9cd2981eb82a4955429880b70d967d0e19a9fa"
+    },
+    {
+      "path": "scripts/qwen35_direct_baseline.py",
+      "bytes": 11354,
+      "sha256": "f2726b9293c6bfadad60a88e73242724ce8c5f596abe845d97bec6c020f182c6"
+    },
+    {
+      "path": "scripts/retrieve_skills.py",
+      "bytes": 13131,
+      "sha256": "d19b5093fb74e9c9dab24269459838ae471dd696b2aa65d2dff916494953b2dc"
+    },
+    {
+      "path": "scripts/run_user_vlm_spc.py",
+      "bytes": 10184,
+      "sha256": "fcbd29165540e1cf5f64d835130656de53c0d72b7b4f5e9c3257ec4776b002a1"
+    },
+    {
+      "path": "scripts/serve_llm.py",
+      "bytes": 1695,
+      "sha256": "52b0db996e87e78ac4408be2f501cecbb57226fe6b6a2f17b6410a2a5ddbc97f"
+    },
+    {
+      "path": "scripts/summarize_latency.py",
+      "bytes": 4456,
+      "sha256": "20dcbfbe58e86ba3c451821d8722e203c7311f670337bb9cc0b072f3085c5636"
+    },
+    {
+      "path": "scripts/user_vlm_instruct.py",
+      "bytes": 8539,
+      "sha256": "42a19688e54cd8e574acb1951691acc6da382cf3b61380226cb49c047f438760"
+    },
+    {
+      "path": "skill/graphrag/catalog.json",
+      "bytes": 120,
+      "sha256": "5b821493b9a0eed01c841ac6a5ec5843cd2a4b378420485c0a54f28e8ea61361"
+    },
+    {
+      "path": "skill/graphrag/graph-c0-0/SKILL.md",
+      "bytes": 811,
+      "sha256": "e236a022308b0a4ae256826bd074d0bdfacca2793ed308a44cc38b166bcde551"
+    },
+    {
+      "path": "skill/graphrag/graph-c0-1/SKILL.md",
+      "bytes": 796,
+      "sha256": "12dbdb00101da6d13fc56675eee7d6b2932ccf336f304f8ca50af59c67f19749"
+    },
+    {
+      "path": "skill/graphrag/graph-c0-2/SKILL.md",
+      "bytes": 759,
+      "sha256": "60ff97678f386b7bdd531eac7a8d421e36686d57f173fa66a084119358b406f1"
+    },
+    {
+      "path": "skill/graphrag/graph-c0-3/SKILL.md",
+      "bytes": 1085,
+      "sha256": "00a335cc6c277cb59c1f014062e2a7ed311728450a213de71fa634d8eb59fa55"
+    },
+    {
+      "path": "skill/graphrag/graph-c0-4/SKILL.md",
+      "bytes": 746,
+      "sha256": "a9e3f3266d21e2fc54e1dd31bb40841f2be014541010bb56b1548ff506fbe60d"
+    },
+    {
+      "path": "tests/test_online_api.py",
+      "bytes": 10938,
+      "sha256": "0a8721bc313b814f1e85c05edecdd38e496aa2cdb57db02cfbb3fd590c7bd879"
+    }
+  ],
+  "included_bytes_excluding_this_manifest": 4362546,
+  "documentation_update": {
+    "date": "2026-11-23",
+    "files": [
+      "README.md",
+      "requirements.txt",
+      "requirement.txt",
+      "requirements-vision.txt"
+    ],
+    "dependency_validation": "Installed-metadata checks and offline pip dry-run; no clean installation performed.",
+    "model_inference_performed": false
+  }
+}

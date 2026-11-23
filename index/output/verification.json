@@ -1,0 +1,268 @@
+{
+  "status": "passed",
+  "scope": {
+    "type": "offline artifact verification",
+    "source_examples": 3,
+    "associated_documents": 2,
+    "principles_and_prompts": "43 English principles plus every .txt in prompt/ and index/prompts/",
+    "community_reports": "All six reports and all title, summary, full_content, findings, full_content_json, rank_explanation fields",
+    "skills": "All five Markdown files, active catalog, skills.jsonl, source mappings, and saved BGE-M3 When matrix",
+    "manual_english_review": "Read all six full community reports and all five complete skill files; English prose confirmed",
+    "model_loading": false,
+    "online_inference": "Outside this verification scope",
+    "legacy_directory_scan": "Entire workspace",
+    "legacy_reference_scan": "Current index.py, principles, settings, prompts, active index/output textual/parquet artifacts and skill/graphrag files"
+  },
+  "counts": {
+    "entities": 22,
+    "relations": 21,
+    "assigned_communities": 5,
+    "all_cs": 6,
+    "valid_cs": 5,
+    "official_unassigned_cs": 1,
+    "skills": 5
+  },
+  "checks": [
+    {
+      "check": "principles_43_english",
+      "passed": true,
+      "details": {
+        "count": 43,
+        "source": "principles.json"
+      }
+    },
+    {
+      "check": "all_prompt_files_no_cjk",
+      "passed": true,
+      "details": {
+        "files": [
+          "prompt\\community_skill.txt",
+          "prompt\\final_generation.txt",
+          "prompt\\principle_association.txt",
+          "prompt\\qwen35_direct_baseline.txt",
+          "prompt\\text_user_profile.txt",
+          "prompt\\user_profile.txt",
+          "index\\prompts\\community_report.txt",
+          "index\\prompts\\entity_extraction.txt"
+        ],
+        "files_with_cjk": []
+      }
+    },
+    {
+      "check": "profile_definition_split_marker",
+      "passed": true,
+      "details": {
+        "marker": "Return only a JSON object",
+        "occurrences": 1
+      }
+    },
+    {
+      "check": "official_table_counts",
+      "passed": true,
+      "details": {
+        "create_final_communities": 5,
+        "create_final_community_reports": 6,
+        "create_final_documents": 2,
+        "create_final_entities": 22,
+        "create_final_nodes": 22,
+        "create_final_relationships": 21,
+        "create_final_text_units": 2
+      }
+    },
+    {
+      "check": "assigned_and_unassigned_reports",
+      "passed": true,
+      "details": {
+        "all_reports": 6,
+        "valid_assigned_reports": 5,
+        "official_unassigned_community_minus_one_reports": 1,
+        "community_minus_one_preserved": true,
+        "community_minus_one_compiled_to_skill": false
+      }
+    },
+    {
+      "check": "all_cs_fields_english_no_cjk",
+      "passed": true,
+      "details": {
+        "fields": [
+          "title",
+          "summary",
+          "full_content",
+          "findings",
+          "full_content_json",
+          "rank_explanation"
+        ],
+        "reports": [
+          {
+            "report_id": "1633c493-3481-494a-8383-5e088f542243",
+            "community": -1,
+            "level": 0,
+            "title": "User-Profile Driven Response Strategy"
+          },
+          {
+            "report_id": "54c18064-d0b6-4641-bd42-e075bc7b94cf",
+            "community": 0,
+            "level": 0,
+            "title": "Corporate and Male User Neutral Tone Guidelines"
+          },
+          {
+            "report_id": "2c75c6f6-8c82-4644-96c2-21a1240b62c6",
+            "community": 1,
+            "level": 0,
+            "title": "Corporate Employee Efficiency and Conciseness"
+          },
+          {
+            "report_id": "42fa3cdb-2155-4b49-b050-0281b3a7566b",
+            "community": 2,
+            "level": 0,
+            "title": "Professional Efficiency and Conciseness in Corporate Interactions"
+          },
+          {
+            "report_id": "0ebfe9f4-ae0f-4d53-a5c3-b2bef2e8aab0",
+            "community": 3,
+            "level": 0,
+            "title": "Unemployed User Job-Search Context with Casual Style Preferences"
+          },
+          {
+            "report_id": "59109d64-4449-4216-959d-ca90743abe12",
+            "community": 4,
+            "level": 0,
+            "title": "Casual Job Seeker Engagement Strategy"
+          }
+        ],
+        "fields_with_cjk": []
+      }
+    },
+    {
+      "check": "cs_json_matches_parquet_columns",
+      "passed": true,
+      "details": {
+        "mismatched_report_ids": []
+      }
+    },
+    {
+      "check": "catalog_skill_files_and_jsonl_align",
+      "passed": true,
+      "details": {
+        "catalog_names": [
+          "graph-c0-0",
+          "graph-c0-1",
+          "graph-c0-2",
+          "graph-c0-3",
+          "graph-c0-4"
+        ],
+        "skill_jsonl_rows": 5,
+        "physical_skill_count": 5
+      }
+    },
+    {
+      "check": "five_skill_files_fully_english_no_cjk",
+      "passed": true,
+      "details": {
+        "files": [
+          "skill\\graphrag\\graph-c0-0\\SKILL.md",
+          "skill\\graphrag\\graph-c0-1\\SKILL.md",
+          "skill\\graphrag\\graph-c0-2\\SKILL.md",
+          "skill\\graphrag\\graph-c0-3\\SKILL.md",
+          "skill\\graphrag\\graph-c0-4\\SKILL.md"
+        ],
+        "files_with_cjk": []
+      }
+    },
+    {
+      "check": "source_index_and_report_community_skill_mapping",
+      "passed": true,
+      "details": {
+        "mappings": [
+          {
+            "name": "graph-c0-0",
+            "report_id": "54c18064-d0b6-4641-bd42-e075bc7b94cf",
+            "community": 0,
+            "level": 0,
+            "source_index": "index/output"
+          },
+          {
+            "name": "graph-c0-1",
+            "report_id": "2c75c6f6-8c82-4644-96c2-21a1240b62c6",
+            "community": 1,
+            "level": 0,
+            "source_index": "index/output"
+          },
+          {
+            "name": "graph-c0-2",
+            "report_id": "42fa3cdb-2155-4b49-b050-0281b3a7566b",
+            "community": 2,
+            "level": 0,
+            "source_index": "index/output"
+          },
+          {
+            "name": "graph-c0-3",
+            "report_id": "0ebfe9f4-ae0f-4d53-a5c3-b2bef2e8aab0",
+            "community": 3,
+            "level": 0,
+            "source_index": "index/output"
+          },
+          {
+            "name": "graph-c0-4",
+            "report_id": "59109d64-4449-4216-959d-ca90743abe12",
+            "community": 4,
+            "level": 0,
+            "source_index": "index/output"
+          }
+        ],
+        "invalid_mappings": []
+      }
+    },
+    {
+      "check": "bge_when_signature_shape_and_unit_norms",
+      "passed": true,
+      "details": {
+        "path": "data/graphrag_skill_when_embeddings.npz",
+        "shape": [
+          5,
+          1024
+        ],
+        "dtype": "float32",
+        "signature": "7a4323ab0b6f55204741b9b5085d589c333568652d1f4caf7d9a690cb7ea2c48",
+        "expected_signature": "7a4323ab0b6f55204741b9b5085d589c333568652d1f4caf7d9a690cb7ea2c48",
+        "row_norms": [
+          1.0,
+          1.0,
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "unit_norm_absolute_tolerance": 1e-05
+      }
+    },
+    {
+      "check": "no_native_smoke_directory",
+      "passed": true,
+      "details": {
+        "workspace": ".",
+        "matching_directories": []
+      }
+    },
+    {
+      "check": "no_native_smoke_reference_in_active_outputs",
+      "passed": true,
+      "details": {
+        "text_files_checked": 22,
+        "parquet_tables_checked": 7,
+        "matching_files": []
+      }
+    },
+    {
+      "check": "summary_points_to_current_outputs",
+      "passed": true,
+      "details": {
+        "artifacts": "index/output",
+        "status": "complete",
+        "language": "English",
+        "samples": 3,
+        "documents": 2
+      }
+    }
+  ],
+  "failures": []
+}

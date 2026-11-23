@@ -1,0 +1,16 @@
+Judge which seed principles are semantically relevant to this user-side dialogue example.
+
+The persona describes the USER. History retains both speakers for conversational context, and the target response is an observed ASSISTANT reply. Assistant self-descriptions and a job, interest or preference belonging to somebody else do not describe the user. In particular, a question about the other speaker's occupation does not establish the user's occupation.
+
+Assess all listed principle IDs. A principle is relevant when its user condition is supported or reasonably implied by the user persona or the user's dialogue, and its behavioral guidance could materially guide a reply to the latest user message. Shared words alone are insufficient. Choose relevant guidance independently of whether the observed assistant later follows it. Exclude unrelated principles.
+
+Review every listed principle, then return only the related principle IDs. Return an empty list when none apply. Every omitted principle is unrelated and will be skipped.
+Return exactly one JSON object with a single field named "related_principles". Its value is a JSON array of the selected two-digit catalog ID strings, each used once. Use an empty array only when no principle is relevant. Do not output explanations or copy IDs without checking this example's evidence.
+
+Seed principles
+{principles}
+
+User-side training evidence
+{example}
+
+Assess this example now and return the JSON object.

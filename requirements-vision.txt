@@ -1,0 +1,11 @@
+# Optional local Qwen3-VL image-profile dependencies.
+# First install matching PyTorch (>=2.5) and Torchvision builds for your
+# platform/driver from the official PyTorch installation channel.
+-r requirements.txt
+transformers==5.15.1
+accelerate==1.14.0
+Pillow==12.3.0
+Jinja2>=3.1.0,<4
+huggingface-hub==1.28.0
+# The pinned Hub requires this range; Click 8.1.7 is incompatible with it.
+click>=8.4.2,<9

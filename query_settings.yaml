@@ -1,0 +1,12 @@
+k: 1
+epsilon: 60
+llm:
+  api_base: <GENERATION_API_BASE>
+  api_key: local
+  model: D:/Models/Qwen3.5-4B
+  request_timeout: 600
+embeddings:
+  api_base: <EMBEDDING_API_BASE>
+  api_key: local
+  model: bge-m3
+  request_timeout: 600
